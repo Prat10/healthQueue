@@ -9,7 +9,7 @@ import {
   Wallet,
 } from "lucide-react";
 
-const ICONS = {
+const ICONS:any = {
   waiting: Users,
   appointments: Calendar,
   current: UserCheck,
@@ -41,7 +41,7 @@ export default function StatCard({
   label,
   icon = "waiting",
   color = "bg-white",
-}) {
+}:any) {
   const Icon = ICONS[icon] || Users;
 
   return (

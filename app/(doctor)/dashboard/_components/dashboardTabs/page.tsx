@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function DashboardTabs({ onChange }) {
+export default function DashboardTabs({ onChange }:any) {
   const tabs = [
     { id: "queue", label: "Queue Management" },
     { id: "patients", label: "Patient Management" },
@@ -13,7 +13,7 @@ export default function DashboardTabs({ onChange }) {
 
   const [active, setActive] = useState("queue");
 
-  function clickTab(id) {
+  function clickTab(id:any) {
     setActive(id);
     onChange?.(id);
   }

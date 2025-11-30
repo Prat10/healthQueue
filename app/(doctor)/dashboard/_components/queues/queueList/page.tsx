@@ -14,24 +14,24 @@ export default function QueueList({ initialPatients = [] }) {
   function completeConsultation() {
     // mark current as completed and move to next
     setPatients((prev: any) =>
-      prev.map((p, i) =>
+      prev.map((p:any, i:any) =>
         i + 1 === currentIdx ? { ...p, status: "completed" } : p
       )
     );
     if (currentIdx < patients.length) setCurrentIdx((s) => s + 1);
   }
 
-  function updateEstimated(id) {
+  function updateEstimated(id:any) {
     // sample update — reduce estimated time by 5 minutes for demo
-    setPatients((prev) =>
-      prev.map((p) =>
+    setPatients((prev:any) =>
+      prev.map((p:any) =>
         p.id === id ? { ...p, estimated: Math.max(5, p.estimated - 5) } : p
       )
     );
   }
 
-  function callPatient(id) {
-    const idx = patients.findIndex((p) => p.id === id);
+  function callPatient(id:any) {
+    const idx = patients.findIndex((p:any) => p.id === id);
     if (idx !== -1) setCurrentIdx(idx + 1);
   }
 
@@ -57,7 +57,7 @@ export default function QueueList({ initialPatients = [] }) {
       </div>
 
       <div className="space-y-4">
-        {patients.map((p, i) => (
+        {patients.map((p:any, i) => (
           <QueueItem
             key={p.id}
             index={i + 1}

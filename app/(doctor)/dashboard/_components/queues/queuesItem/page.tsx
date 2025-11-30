@@ -7,7 +7,7 @@ export default function QueueItem({
   onComplete,
   onCall,
   onUpdateTime,
-}) {
+}:any) {
   return (
     <div
       className={`rounded-lg p-6 flex flex-col md:flex-row md:justify-between md:items-center mt-4 border ${

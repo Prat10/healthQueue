@@ -4,7 +4,7 @@ import DashboardTabs from "./_components/dashboardTabs/page";
 import QueueList from "./_components/queues/queueList/page";
 import StatCard from "./_components/statsCard/page";
 
-const DUMMY_PATIENTS = [
+const DUMMY_PATIENTS:any = [
   {
     id: "p1",
     name: "Ravi Sharma",
