@@ -31,10 +31,14 @@ export default function Navbar() {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <button className="text-gray-600 hover:text-blue-600">Login</button>
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
-            Sign Up
-          </button>
+          <Link href="/login">
+            <button className="text-gray-600 hover:text-blue-600">Login</button>
+          </Link>
+          <Link href="/signup">
+            <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+              Sign Up
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
