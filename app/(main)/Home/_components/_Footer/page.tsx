@@ -1,6 +1,13 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { FiGrid } from "react-icons/fi";
 
+
 export default function Footer() {
+
+  const router = useRouter();
+
   return (
     <footer className="bg-[#1E2A38] text-gray-300 py-12">
       
@@ -25,8 +32,8 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-semibold mb-3">For Patients</h3>
           <ul className="space-y-2 text-gray-400">
-            <li className="hover:text-white cursor-pointer">Book Appointment</li>
-            <li className="hover:text-white cursor-pointer">My Appointments</li>
+            <li className="hover:text-white cursor-pointer" onClick={() => router.push("/mybooking")}>Book Appointment</li>
+            <li className="hover:text-white cursor-pointer" onClick={() => router.push("/myappointments")}>My Appointments</li>
             <li className="hover:text-white cursor-pointer">Medical Records</li>
           </ul>
         </div>

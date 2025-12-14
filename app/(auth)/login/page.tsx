@@ -16,6 +16,7 @@ import SocialButton from "../signup/_components/button/SocialButton";
 type Role = "patient" | "doctor";
 
 export default function Login() {
+    
   const [role, setRole] = useState<Role>("doctor");
   const [showPassword, setShowPassword] = useState(false);
 
@@ -25,7 +26,7 @@ export default function Login() {
         {/* Header */}
         <h1 className="text-2xl font-bold text-center">Welcome Back</h1>
         <p className="text-sm text-gray-500 text-center mt-1">
-          Sign in to your HealthQueue account
+          Sign in to your QueueFree account
         </p>
 
         {/* Role Switch */}

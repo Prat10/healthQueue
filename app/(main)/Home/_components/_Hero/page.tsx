@@ -1,10 +1,13 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+import { useRouter } from "next/navigation";
+
 
 export default function Hero() {
+
+  const router = useRouter();
+
   return (
     <div className="w-full">
-
       {/* Hero Section */}
       <section
         className="relative w-full h-[60vh] bg-cover bg-center"
@@ -29,17 +32,19 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-5">
-              <button className="bg-blue-600 font-normal text-white px-6 py-4 rounded-lg shadow-md hover:bg-blue-700">
+              <button
+                className="bg-blue-600 font-normal text-white px-6 py-4 rounded-lg shadow-md hover:bg-blue-700 cursor-pointer"
+                onClick={() => router.push("/mybooking")}>
                 Book Appointment Now
               </button>
 
-              <button className="border-2 border-blue-600 font-semibold text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50">
+              <button className="border-2 border-blue-600 font-semibold text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 cursor-pointer"
+                onClick={() => router.push("/dashboard")}>
                 Doctor Dashboard
               </button>
             </div>
           </div>
         </div>
-
       </section>
     </div>
   );

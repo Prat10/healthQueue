@@ -3,8 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
   const [open, setOpen] = useState(false);
 
   return (
@@ -17,7 +19,7 @@ export default function Navbar() {
             <i className="ri-health-book-line text-white text-lg"></i>
           </div>
           <span className="text-xl font-semibold">
-            <Link href="/Home">HealthQueue</Link>
+            <Link href="/Home">Queuefree</Link>
           </span>
         </div>
 
@@ -67,10 +69,12 @@ export default function Navbar() {
           </Link>
 
           <div className="flex flex-col gap-3 mt-2">
-            <button className="text-gray-600 hover:text-blue-600 text-left">
+            <button className="text-gray-600 hover:text-blue-600 text-left"
+             onClick={() => router.push("/login")}>
               Login
             </button>
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">
+            <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700"
+            onClick={() => router.push("/signup")}>
               Sign Up
             </button>
           </div>

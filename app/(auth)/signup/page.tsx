@@ -20,7 +20,7 @@ export default function RegisterPage() {
         
         {/* Header */}
         <h2 className="text-xl sm:text-2xl font-bold text-center">
-          Join HealthQueue
+          Join Queuefree
         </h2>
         <p className="text-gray-500 text-xs sm:text-sm text-center mt-1">
           Create your account and start managing healthcare efficiently

@@ -8,7 +8,7 @@ export default function WhyChoose() {
     <section className="w-full py-20 bg-gray-50">
       <div className="text-center mb-16 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Why Choose HealthQueue?
+          Why Choose Queuefree?
         </h2>
         <p className="text-gray-600 mt-3 max-w-2xl text-lg mx-auto">
           Revolutionary healthcare booking system designed specifically for tier 2–3 cities in India
