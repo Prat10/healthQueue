@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="bg-blue-600 p-2 rounded-full">
               <FiGrid className="text-white text-xl" />
             </div>
-            <h2 className="text-xl font-semibold text-white">HealthQueue</h2>
+            <h2 className="text-xl font-semibold text-white">Queuefree</h2>
           </div>
 
           <p className="mt-4 leading-relaxed text-gray-400">
